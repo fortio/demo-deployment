@@ -1,0 +1,3 @@
+# ignore acme info and certs
+acme_account+key
+*.fortio.org
