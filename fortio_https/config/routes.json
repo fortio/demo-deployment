@@ -1,10 +1,10 @@
 [
     {
-        "host": "grpc.fortio.org:443",
+        "host": "grpc.fortio.org",
         "destination": "http://127.0.0.1:8079"
     },
     {
-        "host": "grpc.aws.fortio.org:443",
+        "host": "grpc.aws.fortio.org",
         "destination": "http://127.0.0.1:8079"
     },
     {
