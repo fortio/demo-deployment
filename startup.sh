@@ -1,8 +1,11 @@
 #! /bin/sh
 set -x
 ./bind_to_443.sh `which proxy`
-nohup fortio server -http-port disabled -tcp-port disabled -udp-port disabled -redirect-port disabled -grpc-port 8079 &
+pkill fortio
+pkill proxy
+nohup fortio server -http-port disabled -tcp-port disabled -udp-port disabled\
+   -redirect-port disabled -grpc-port 8079 > grpc.log &
 cd fortio_data
-nohup fortio report -http-port 8080 -redirect-port disabled &
+nohup fortio report -http-port 8080 -redirect-port disabled > ../report.log &
 cd ../fortio_https
-nohup proxy -email fortio@fortio.org -config config/ &
+nohup proxy -email fortio@fortio.org -config config/ > ../proxy.log &
