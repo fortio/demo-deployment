@@ -4,7 +4,11 @@
         "destination": "http://127.0.0.1:8079"
     },
     {
-        "host": "grpc.aws.fortio.org",
+        "prefix": "/fgrpc.PingServer/Ping",
+        "destination": "http://127.0.0.1:8079"
+    },
+    {
+        "prefix": "/grpc.health.v1.Health/Check",
         "destination": "http://127.0.0.1:8079"
     },
     {
