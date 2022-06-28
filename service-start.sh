@@ -10,5 +10,5 @@ fortio report -http-port 8080 -redirect-port disabled >> ../report.log 2>&1 &
 cd ../fortio_https
 proxy -email fortio@fortio.org -h2 -config config/ >> ../proxy.log 2>&1 &
 # Use the canonical url so tsv cache is generated with the right one
-curl https://demo.fortio.org/data/index.tsv -o index.tsv
+curl -s https://demo.fortio.org/data/index.tsv -o index.tsv
 head -2 index.tsv
