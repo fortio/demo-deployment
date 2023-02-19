@@ -8,7 +8,7 @@ fortio server -http-port disabled -tcp-port disabled -udp-port disabled\
 cd fortio_data
 fortio report -http-port 8080 -redirect-port disabled >> ../report.log 2>&1 &
 cd ../fortio_https
-proxy -email fortio@fortio.org -h2 -config config/ >> ../proxy.log 2>&1 &
+proxy -email fortio@fortio.org -h2 -config-dir config/ >> ../proxy.log 2>&1 &
 # wait a bit for both to start
 sleep 5
 # Use the canonical url so tsv cache is generated with the right one
