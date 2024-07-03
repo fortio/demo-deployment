@@ -1,5 +1,6 @@
 #! /bin/sh
 set -x
+uname -a
 go version
 git pull
 CGO_ENABLED=0 go install -a -ldflags "-s -w" fortio.org/fortio@latest; fortio version
