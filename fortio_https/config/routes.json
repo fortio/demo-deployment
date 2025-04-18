@@ -16,6 +16,10 @@
         "destination": "http://127.0.0.1:31337"
     },    
     {
+        "prefix": "/fire",
+        "destination": "http://127.0.0.1:3000"
+    },    
+    {
         "host": "*",
         "destination": "http://127.0.0.1:8080"
     }
